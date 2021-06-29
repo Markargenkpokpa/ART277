@@ -140,7 +140,7 @@ body{
 .home h1{
     position: absolute;
     left: 25%;
-    color: rgb(208, 253, 5);
+    color: white;
     z-index: 4;
     font-size: 32px;
 
@@ -435,7 +435,7 @@ body{
     }
 
     .achievement-container{
-        height: 18em;
+        height: 35em;
     }
 
     .achievements{
@@ -512,3 +512,9 @@ body{
 
     
 }
+
+.sucess{width: 50%;
+height: 300px;}
+
+.site{width: 50%;
+    height: 300px;}
