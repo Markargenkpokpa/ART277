@@ -1,520 +1,538 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    scroll-behavior: smooth;
+
+}
+
 body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    min-height: 1000px;
+}
+
+/*banner styling*/
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(picture/p1.jpg);
+    background-size: cover;
+}
+
+.banner .content{
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h1{
+    font-size: 5rem;
+    color: rgb(110, 72, 11);
+    text-shadow: 3px 2px 5px rgb(255, 255, 255) ;
+}
+
+.banner .content p{
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.btn{
+font-size: 2rem;
+color: rgb(255, 255, 255);
+background: black;
+text-decoration: none;
+display: inline-block;
+padding: 10px 30px;
+margin-top:20px;
+letter-spacing:2px;
+transition:0.5s;
+}
+
+.btn:hover{
+    letter-spacing: 6px;
+    border-radius: 20px;
+    color: chartreuse;
 }
 
 
-/* navigation */
-.header{
-    background-color: white;
-    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1) ;
+/*header styling*/
+header{
     position: fixed;
-    top: 0;
+    top:0;
     left: 0;
-    right: 0;
     width: 100%;
-    z-index: 3;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition:0.5s;
+
+}
+/*nav sticky styling*/
+header.sticky{
+    background: rgb(223, 163, 85);
+    padding: 30px 100px;
+    box-shadow: 0 5px 20px rgb(0, 0, 0,0.05);
+
 }
 
 
 
-.header ul{
-    margin: 0;
-    padding: 0;
+header .logo{
+    color: rgb(247, 6, 6);
+    font-weight: 200px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+
+header.sticky .logo{
+color: rgb(0, 64, 255);
+}
+
+/*heder navigation*/
+header .navigation{
+    position: relative;
+    display: flex;
+
+}
+
+header .navigation li{
     list-style: none;
-    overflow: hidden;
-    background-color: white;
+    margin-left: 40px;
 }
 
-.header ul a{
-    display: block;
-    padding: 12px;
+header .navigation li a{
     text-decoration: none;
-    font-size: 14px;
-    transition: background .2s ease-in-out;
-    color: black;
+    color: rgb(110, 72, 11);
+    font-weight: 300px;
+    font-size: 30px;
+    text-shadow: 1px 2px 5px rgb(255, 255, 255) ;
 }
 
-.header ul a:hover{
-    background-color: gray;
-    z-index: 4;
-    border-radius: 10px;
-
-}
-
-.header .logo{
-    float: left;
-    display: block;
-    padding: 20px 20px;
-    font-size: 22px;
-    text-decoration: none;
-    color: black;
-}
-
-.header .menu{
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-}
-
-.header .menu-icon{
-    padding: 28px 20px;
-    position: relative;
-    float: right;
-    cursor: pointer;
-}
-
-.header .menu-icon .nav-icon{
-    background-color: black;
-    display: block;
-    width: 22px;
-    height: 3px;
-    position: relative;
-    transition: background .2s ease-out;
-}
-
-.header .menu-icon .nav-icon::before{
-    content: "";
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: block;
-    top: 5px;
-    transition: all .2s ease-in-out;
-}
-.header .menu-icon .nav-icon::after{
-    content: "";
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: block;
-    top: -5px;
-    transition: all .2s ease-out;
-}
-
-.menu-btn{
-    display: none;
-}
-
-.header .menu-btn:checked ~ .menu{
-    max-height:360px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon{
-    background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon::before{
-    transform: rotate(-45deg);
-    top: 0;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon::after{
-    transform: rotate(45deg);
-    top: 0;
+header .navigation li a:hover{
+color: rgb(238, 9, 9);
 }
 
 
-/* home page background */
-.home::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)), url(ImgFolder/work1.jpeg); 
-    background-repeat: no-repeat;
+
+/*header .navigation li a sticky color*/
+header.sticky .navigation li a{
+color: rgb(0, 0, 0);
+}
+
+header.sticky .navigation li a:hover{
+    color: rgb(6, 247, 26);
+    }
+
+
+
+    /*about styling */
+
+    section{
+        padding: 100px;
+    }
+
+  
+/*row styling for about*/
+    .row{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .row .col50{
+        position: relative;
+        width: 48%;
+
+    }
+/*titletext styling*/
+    .titletext{
+color:rgb(107, 8, 28) ;
+font-size: 2rem;
+font-weight: 300;
+
+    }
+
+
+ .row .col50 .imgbx{
+position: relative;
+width: 100%;
+min-height:300px ;
+    }
+/*about image*/
+    .row .col50 .imgbx img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       
+}
+
+ /*product styling */
+
+/*content styling*/
+ .products .content{
+     display: flex;
+     justify-content: center;
+     flex-direction: row-reverse;
+     flex-wrap: wrap;
+     margin-top: 40px;
+ }
+
+ /* image box stying*/
+
+.products .content .box{
+width: 340px;
+margin: 20px;
+box-shadow: 0 5px 35px rgb(0, 0, 0,0.8);
+}
+
+ .title{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .products .content .box .img8x{
+     position: relative;
+     width: 100%;
+     height: 300px;
+     resize: 30%;
+ }
+
+ .products .content .box .img8x img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .products .content .box .text{
+padding: 15px;
+background: rgb(138, 65, 6);
+color: rgb(128, 8, 28);
+ }
+
+ .products .content .box .text h3{
+    font-weight: 400px;
+    color: rgb(218, 224, 217);
+     }
+.products .content .box .text h3:hover{
+   color: rgb(204, 6, 6);
+ }
+
+.testimonial{
+    background-image: url(picture/p1.jpg);
     background-size: cover;
     background-position: center;
-    z-index: -1;
-}
-
-.home{
-    position: relative;
-}
-
-.home h1{
-    position: absolute;
-    left: 25%;
-    color: white;
-    z-index: 4;
-    font-size: 32px;
-
-} 
-
-/* about section */
-.about-container{
-    position: relative;
-    height: 41.6em;
-    width: 90%;
-    left: 5%;
-    right: 5%;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-}
-
-.about-title{
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 25px;
-    padding-top: 10px;
-    font-size: 16px;
-}
-
-.about-image img{
-    height: 300px;
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-}
-
-.name h1{
-    padding: 0 30px;
-    font-size: 24px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.name h3{
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-    font-size: 16px;
-    font-family: cursive;
-    text-align: center;
-    padding: 0 30px;
-}
-
-.about-content{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 14px;
-    padding: 0 30px;
-}
-/* achievement and skills segment */
-
-.achievements-skills-container{
-    position: relative;
+    background-repeat: no-repeat;
 
 }
 
-.achievement-container{
-    position: relative;
-    left: 5%;
-    right: 5%;
-    width: 90%;
-    height: 15em;
-    margin-top: 120px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+.titlewhite .titletext,
+
+.titlewhite p
+{
+color: rgb(65, 11, 11);
+
 }
 
-.achievements{
-    padding: 0 30px;
-    text-align: center;
-    font-size: 14px;
+.testimonial .content{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+flex-direction: row;
+margin-top: 40px;
 }
-
-.achievements p{
-    padding-top: 20px;
+.testimonial .content .box{
+    width: 340px;
+    margin: 20px;
+    padding: 40px;
+    background: rgb(250, 247, 247);
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
+    flex-direction: column;
+    }
+    .testimonial .content .box:hover{
+        
+        background: rgb(236, 135, 52);
+        
+        }
 
-.achievements h1{
-    font-size: 1.5em;
-    padding-top: 50px;
-    text-align: center;
-}
+    .testimonial .content .box .img8x{
+        position: relative;
+        height: 80px;
+        width: 80px;
+        margin-bottom: 20px;
+        border-radius: 40px;
+        overflow: hidden;
 
-.skills-container{
-    position: relative;
-    left: 5%;
-    right: 5%;
-    width: 90%;
-    height: 240px;
-    margin-top: 120px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-}
+        }
+        .testimonial .content .box .img8x img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            
+            }
+            .testimonial .content .box .text{
+               text-align: center;
+                
+                }
+                .testimonial .content .box .text p{
+                   font-style: italic;
+                    
+                     
+                     }
+                     .testimonial .content .box .text
+                     h3{
+                        color: rgb(19, 129, 5);
+                        margin-top: 20px;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        text-align: center;
+                 }
 
-.skills{
-    text-align: center;
-    margin-top: 70px;
-    font-size: 14px;
-    padding: 0 30px;
-}
- 
-
-.skills h1{
-    font-size: 1.5em;
-    padding-top: 40px;
-}
-
-.skills p{
-    padding-top: 20px;
-}
-
-/* footer */
-
-.footer-container{
-    position: relative;
-    width: 100%;
-    height: 500px;
-    margin-top: 50px;
-    background-color: rgb(32, 32, 32);
-}
-
-.footer-content{
-    text-align: center;
-    padding-top: 20px;
-    color: white;
-}
-
-.footer-content i{
-    font-size: 14px;
-    padding-top: 10px;
-}
-
-.footer-content h1{
-    font-size: 18px;
-    padding-top: 10px;
-    color: crimson;
-}
-
-.footer-content p{
-    font-size: 10px;
+             
+    .Contact{
+      background-image:url(picture/img61.png) ;
+      background-position: center;
+      background-repeat: no-repeat;
     
-}
+    }
 
-.footer-content .personal-data h1{
-    font-size: 20px;
-}
+    .contactform{
+        padding: 75px 30px;
+        background: rgb(110, 72, 11);
+        box-shadow: 0 15px 50px rgba(0, 9, 0,0.05);
+        max-width: 500px;
+        margin-top: 50px;
 
-.footer-content button{
-    background-color: rgb(0, 0, 47);
-    border: none;
-    border-radius: 10px;
-    margin-top: 0;
-}
+    }
 
-.footer-content button a{
+    .contactform h3{
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+
+    }
+    .contactform .inputbox{
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+    .contactform .inputbox input,
+    .contactform .inputbox textarea{
+       
+width: 100%;
+border: 1px solid #555;
+padding: 10px;
+outline: none;
+font-size: 16px;
+font-weight: 300;
+resize: none;
+
+    }
+    
+.contactform .inputbox input[type="submit"]{
+    font-size: 1em;
+    color: white;
+    background: black;
+    display: inline-block;
     text-decoration: none;
-    color: white;
-    padding: 10px 10px;
+    letter-spacing: 2px;
+    max-width: 100px;
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+
 }
 
-.footer-copyright{
-    position: absolute;
-    width: 100%;
-    height: 70px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    color: white;
+.contactform .inputbox input[type="submit"]:hover{
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    background: rgb(3, 235, 243);
+    border-radius: 10px;
+
 }
 
-.footer-copyright p{
-    text-align: center;
-    font-size: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+/*footer section*/
+.copyright-text{
+padding: 8px 40px;
+border-top: 1px solid rgba(0, 0, 0,0.1);
+text-align: center;
+background: gray;
+height: 80px;
+
 }
 
+.copyright-text p{
+    color: black;
+    margin-top: 30px;
 
+}
 
+.copyright-text a{
+    color: chartreuse;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
-/* media query */
-
-@media(min-width: 900px){
-    .header li{
-        float: left;
+@media (max-width: 991px){
+    header,
+    header .sticky{
+        padding: 10px 20px;
     }
-
-    .header li a{
-        padding: 20px 25px;
-    }
-
-    .header .logo{
-        font-size: 32px;
-    }
-
-    .header .menu{
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-
-    .header .menu-icon{
+    header  .navigation{
         display: none;
     }
 
-    .header ul a{
-        transition: transform .3s ease-in-out;
-    }
-    .header ul a:hover{
-        transform: rotate(6deg);
-        color: crimson;
-        background: transparent;
-    }
-
-    .home h1{
-        font-size: 50px;
-        color: yellow;
-    }
-
-    .home::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
+    header .navigation.active{
         width: 100%;
-        height: 100vh;
-        background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)), url(ImgFolder/work.jpeg); 
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(250, 249, 247);
+    }
+    header .navigation li{
+        margin-left: 0;
+        padding: 10px;
+    }
+    .menuToggle{
+        position: relative;
+        width: 90px;
+        height: 90px;
+        background-image: url(picture/toggle.png);
+        background-size:cover;
         background-repeat: no-repeat;
-        background-size: cover;
         background-position: center;
-        z-index: -1; 
+        cursor: pointer;
     }
-    
-    .header ul a{
+
+    .menuToggle.active{
+        background-image: url(picture/close.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    header.sticky .menuToggle{
+        filter: invert(1);
+    }
+    section {
         padding: 20px;
-        font-size: 22px;
     }
 
-    
-    .about-container{
-        height: 60em;
-        
+    .banner .content h1 {
+        font-size: 3rem;
+        color: rgb(110, 72, 11);
+        text-shadow: 3px 2px 5px rgb(255 255 255);
     }
 
-    .about-title{
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 65px;
-        padding-top: 40px;
-        font-size: 20px;
+    .row {
+      
+        flex-direction: column;
     }
 
-    .about-image img{
-        height: 400px;
-        width: 300px;
-        margin-top: 20px;
-        border-radius: 50%;
+    .row .col50 {
+        position: relative;
+        width: 100%;
     }
 
-    .name h1{
-        font-size: 30px;
+    .row .col50 .imgbx {
+ 
+        height: 300px;
         margin-top: 40px;
     }
-    
-    .name h3{
-        margin-top: 25px;
-        font-size: 22px;
+    .products .content {
+
+        margin-top: 20px;
+    }
+    p {
+       
+        font-size: 13px;
     }
 
-    .about-content{
-        margin-top: 50px;
-        font-size: 22px;
+    .products .content .box .img8x {
+        
+        height: 260px;
+   
     }
-
-    .achievement-container{
-        height: 35em;
-    }
-
-    .achievements{
-        font-size: 22px;
-    }
-    
-    .achievements h1{
-        font-size: 30px;
-    }
-
-    .skills-container{
-        height: 300px;
-    }
-
-    .skills{
-        margin-top: 70px;
-        font-size: 22px;
-    }
-     
-    
-    .skills h1{
-        font-size: 30px;
-    }
-    
-    .footer-container{
-        height: 700px;
-        margin-top: 150px;
-    }
-    
-    .footer-content i{
-        font-size: 22px;
-        padding-top: 5px;
-    }
-    
-    .footer-content h1{
-        font-size: 30px;
-        padding-top: 10px;
-        color: crimson;
-    }
-    
-    .footer-content p{
-        font-size: 22px;
+    .btn {
+        font-size: 1rem;
         
     }
-    
-    .footer-content .personal-data h1{
-        font-size: 26px;
+    .testimonial .content .box {
+        padding: 20px;
+     margin: 10px;
     }
-    
-    .footer-content button{
-        padding: 15px;
-        margin-top: 0px;
-        font-size: 18px;
+    .Contact {
+       background: wheat;
     }
-    
-    .footer-content button a{
-    
-        text-decoration: none;
-        color: white;
-        padding: 10px 10px;
-    }
-    
-    .footer-copyright{
-        height: 120px;
-    }
-    
-    .footer-copyright p{
-        text-align: center;
-        font-size: 16px;
-        padding-top: 30px;
-        padding-bottom: 20px;
-    }
-
-
     
 }
 
-.sucess{width: 50%;
-height: 300px;}
+    
 
-.site{width: 50%;
-    height: 300px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p{
+    font-weight: 300px;
+    color: rgb(82, 22, 4);
+}
